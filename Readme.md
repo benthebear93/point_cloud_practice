@@ -9,4 +9,6 @@ C++, Python example from PCL, Python-pcl.
 - [ ] Fast Point Histogram
 - [ ] Viewpoint Feature Histograms
 - [ ] Segmentation
+- [ ] normal estimation using integral images
 - [ ] etc# point_cloud_practice
+
