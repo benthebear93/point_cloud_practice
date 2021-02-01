@@ -2,7 +2,7 @@
 
 C++, Python example from PCL, Python-pcl.
 
-- [ ] Read and Write
+- [x] Read and Write
 - [ ] Passthrough filter
 - [ ] statistical outlier filter
 - [ ] Point Feature Histogram
