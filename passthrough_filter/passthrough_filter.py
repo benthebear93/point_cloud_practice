@@ -7,7 +7,7 @@ import rospy
 from sensor_msgs.msg import PointCloud2
 import sensor_msgs.point_cloud2 as pc2
 
-file_path = '/home/benlee/Desktop/pc_practice/bunny/data'
+file_path = '/home/benlee/Desktop/pc_practice/pcd_files/data'
 def read_pcd():
     print("read pcd")
     #profile_np = np.load(file_path + '/bun000.npy')
