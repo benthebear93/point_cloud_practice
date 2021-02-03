@@ -4,7 +4,7 @@ C++, Python example from PCL, Python-pcl.
 
 - [x] Read pcd (~~C++~~, ~~python~~)
 - [x] Passthrough filter (~~C++~~, ~~python~~)
-- [ ] statistical outlier filter
+- [x] statistical outlier filter(~~C++~~, ~~python~~)
 - [ ] Point Feature Histogram
 - [ ] Fast Point Histogram
 - [ ] Viewpoint Feature Histograms
