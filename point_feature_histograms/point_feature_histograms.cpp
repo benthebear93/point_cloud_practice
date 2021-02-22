@@ -25,8 +25,6 @@ int main ()
     pfh.setRadiusSearch (0.05);
 
     pfh.compute (*pfhs);
-
-
     pcl::visualization::CloudViewer viewer("Cloud Viewer");
     viewer.showCloud(pfh);
     while (!viewer.wasStopped ())
