@@ -1,0 +1,3 @@
+/home/benlee/Desktop/pc_practice/projecting_points/build/CMakeFiles/rebuild_cache.dir
+/home/benlee/Desktop/pc_practice/projecting_points/build/CMakeFiles/projecting_points.dir
+/home/benlee/Desktop/pc_practice/projecting_points/build/CMakeFiles/edit_cache.dir
