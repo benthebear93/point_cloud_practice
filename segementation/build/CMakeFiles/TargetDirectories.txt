@@ -1,0 +1,3 @@
+/home/benlee/Desktop/pc_practice/segementation/build/CMakeFiles/rebuild_cache.dir
+/home/benlee/Desktop/pc_practice/segementation/build/CMakeFiles/segementation.dir
+/home/benlee/Desktop/pc_practice/segementation/build/CMakeFiles/edit_cache.dir
