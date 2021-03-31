@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/benlee/Desktop/test_cpp/normal_estimation_using_integral_images.cpp" "/home/benlee/Desktop/test_cpp/build/CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.o"
+  "/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/normal_estimation_using_integral_images.cpp" "/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build/CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

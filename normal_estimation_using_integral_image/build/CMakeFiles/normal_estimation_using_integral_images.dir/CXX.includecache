@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/benlee/Desktop/test_cpp/normal_estimation_using_integral_images.cpp
+/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/normal_estimation_using_integral_images.cpp
 pcl/visualization/cloud_viewer.h
 -
 iostream

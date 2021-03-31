@@ -1,8 +1,8 @@
-# Install script for directory: /home/benlee/Desktop/test_cpp
+# Install script for directory: /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/benlee/Desktop/test_cpp/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

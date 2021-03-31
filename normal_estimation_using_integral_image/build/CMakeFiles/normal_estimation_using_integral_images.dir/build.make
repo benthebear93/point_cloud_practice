@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/benlee/Desktop/test_cpp
+CMAKE_SOURCE_DIR = /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/benlee/Desktop/test_cpp/build
+CMAKE_BINARY_DIR = /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/normal_estimation_using_integral_images.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/normal_estimation_using_integral_images.dir/flags.make
 
 CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.o: CMakeFiles/normal_estimation_using_integral_images.dir/flags.make
 CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.o: ../normal_estimation_using_integral_images.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/benlee/Desktop/test_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.o -c /home/benlee/Desktop/test_cpp/normal_estimation_using_integral_images.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.o -c /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/normal_estimation_using_integral_images.cpp
 
 CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/benlee/Desktop/test_cpp/normal_estimation_using_integral_images.cpp > CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/normal_estimation_using_integral_images.cpp > CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.i
 
 CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/benlee/Desktop/test_cpp/normal_estimation_using_integral_images.cpp -o CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/normal_estimation_using_integral_images.cpp -o CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.s
 
 CMakeFiles/normal_estimation_using_integral_images.dir/normal_estimation_using_integral_images.cpp.o.requires:
 
@@ -364,7 +364,7 @@ normal_estimation_using_integral_images: /usr/lib/x86_64-linux-gnu/libvtksys-6.3
 normal_estimation_using_integral_images: /usr/lib/x86_64-linux-gnu/libproj.so
 normal_estimation_using_integral_images: /usr/lib/x86_64-linux-gnu/libvtkCommonCore-6.3.so.6.3.0
 normal_estimation_using_integral_images: CMakeFiles/normal_estimation_using_integral_images.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/benlee/Desktop/test_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable normal_estimation_using_integral_images"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable normal_estimation_using_integral_images"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/normal_estimation_using_integral_images.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -381,6 +381,6 @@ CMakeFiles/normal_estimation_using_integral_images.dir/clean:
 .PHONY : CMakeFiles/normal_estimation_using_integral_images.dir/clean
 
 CMakeFiles/normal_estimation_using_integral_images.dir/depend:
-	cd /home/benlee/Desktop/test_cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/benlee/Desktop/test_cpp /home/benlee/Desktop/test_cpp /home/benlee/Desktop/test_cpp/build /home/benlee/Desktop/test_cpp/build /home/benlee/Desktop/test_cpp/build/CMakeFiles/normal_estimation_using_integral_images.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build /home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build/CMakeFiles/normal_estimation_using_integral_images.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/normal_estimation_using_integral_images.dir/depend
 
