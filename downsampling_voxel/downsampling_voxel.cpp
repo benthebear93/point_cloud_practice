@@ -1,25 +1,20 @@
 #include <iostream>
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
+#include <pcl/filters/voxel_gird.h>
 
 int
 main (int argc, char** argv)
 {
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
+  pcl::PLCPointCloud2::Ptr cloud (new pcl::PLCPointCloud2 ());
+  pcl::PLCPointCloud2::Ptr cloud_filtered (new pcl::PLCPointCloud2 ());
 
-  if (pcl::io::loadPCDFile<pcl::PointXYZ> ("/home/benlee/Desktop/pc_practice/pcd_files/bun000.pcd", *cloud) == -1) //* load the file
-  {
-    PCL_ERROR ("Couldn't read file test_pcd.pcd \n");
-    return (-1);
-  }
-  std::cout << "Loaded "
-            << cloud->width * cloud->height
-            << " data points from bun000.pcd with the following fields: "
-            << std::endl;
-  for (const auto& point: *cloud)
-    std::cout << "    " << point.x
-              << " "    << point.y
-              << " "    << point.z << std::endl;
+  pcl::io::loadPCDFile ("/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/table_scene_mug_stereo_textured.pcd", *cloud);
+  pcl::VoxelGrid<pcl::PLCPointCloud2> sor;
+  sor.setInputCloud (cloud);
+  sor.setLeafSize (0.01f, 0.01f, 0.01f);
+  sor.filter (*cloud_filtered)
 
-  return (0);
+  std::cerr << "Point cloud after filtering" << cloud_filtered->width * cloud_filtered->height << "data points (" << pcl::getFieldList (*cloud_filtered) <<")."<<std::endl;
+    
 }
