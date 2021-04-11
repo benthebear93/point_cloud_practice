@@ -13,7 +13,7 @@ C++, Python example from PCL, Python-pcl.
 - [x] Downsampling a PointCloud using a VoxelGrid filter(~~C++~~, python, Summary)
 - [x] Projecting points using parametric model(~~C++~~, python, Summary)
 - [x] Removing outliers using a conditional and radiusoutlier removal (~~C++~~, python, Summary)
-- [ ] KdTree (C++, python, Summary)
+- [x] KdTree (~~C++~~, python, Summary)
 - [ ] 3D Object Recognition based on Correspondence Grouping (C++, python, Summary)
 - [ ] Point cloud compression octree 
 - [ ] Spatial Partitioning and Search Operations with Octrees (C++, python, Summary)
