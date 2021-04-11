@@ -1,0 +1,3 @@
+/home/benlee/Desktop/pc_practice/region_growing_segmentation/build/CMakeFiles/rebuild_cache.dir
+/home/benlee/Desktop/pc_practice/region_growing_segmentation/build/CMakeFiles/region_growing_segmentation.dir
+/home/benlee/Desktop/pc_practice/region_growing_segmentation/build/CMakeFiles/edit_cache.dir

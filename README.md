@@ -23,7 +23,7 @@ C++, Python example from PCL, Python-pcl.
 - [ ] incrementally register pairs of clouds (C++, python, Summary)
 - [ ] Interactive Iterative Closest Point (C++, python, Summary)
 - [ ] Cylinder model segmentation (C++, python, Summary)
-- [ ] Region growing segmentation (C++, python, Summary)
+- [x] Region growing segmentation (~~C++~~, python, Summary)
 - [ ] Color-based region growing segmentation (C++, python, Summary)
 - [ ] Difference of Normals Based Segmentation (C++, python, Summary)
 - [ ] Smoothing and normal estimation based on polynomial reconstruction (C++, python, Summary)

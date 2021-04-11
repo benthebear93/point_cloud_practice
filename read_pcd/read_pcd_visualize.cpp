@@ -8,7 +8,7 @@ int user_data;
 int main ()
 {
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
-    pcl::io::loadPCDFile ("/home/benlee/Desktop/pc_practice/bunny/data/bun000.pcd", *cloud);
+    pcl::io::loadPCDFile ("/home/benlee/Desktop/pc_practice/pcd_files/data/bun0000.pcd", *cloud);
     
     pcl::visualization::CloudViewer viewer("Cloud Viewer");
     viewer.showCloud(cloud);

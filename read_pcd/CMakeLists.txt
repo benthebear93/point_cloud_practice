@@ -20,3 +20,7 @@ target_link_libraries( read_pcd ${PCL_LIBRARIES} )
 add_executable (read_pcd_visualize read_pcd_visualize.cpp)
 target_link_libraries (read_pcd_visualize ${PCL_LIBRARIES})
 
+add_executable (read_pcd_rgb read_pcd_rgb.cpp)
+target_link_libraries (read_pcd_rgb ${PCL_LIBRARIES})
+
+
