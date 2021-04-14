@@ -18,7 +18,7 @@ C++, Python example from PCL, Python-pcl.
 - [ ] Point cloud compression octree 
 - [ ] Spatial Partitioning and Search Operations with Octrees (C++, python, Summary)
 - [ ] Create ange image (C++, python, Summary, **working on**)
-- [ ] extract borders from range images (C++, python, Summary)
+- [x] extract borders from range images (~~C++~~, python, Summary)
 - [ ] Implicit Shape Model (C++, python, Summary)
 - [ ] iterative closest point (C++, python, Summary)
 - [ ] incrementally register pairs of clouds (C++, python, Summary)
