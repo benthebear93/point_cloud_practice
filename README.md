@@ -3,6 +3,7 @@
 C++, Python example from PCL, Python-pcl.
 
 - [x] Read pcd (~~C++~~, ~~python~~, Summary)
+![Read pcd](image/bunny_original)
 - [x] Passthrough filter (~~C++~~, ~~python~~, Summary)
 - [x] statistical outlier filter(~~C++~~, ~~python~~, Summary)
 - [x] Point Feature Histogram(~~C++~~, python, Summary)
