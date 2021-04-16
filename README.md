@@ -19,7 +19,7 @@ C++, Python example from PCL, Python-pcl.
 - [x] Downsampling a PointCloud using a VoxelGrid filter(~~C++~~, python, Summary)
 ![downsampling_voxel](image/downsampling_voxel.png)
 - [x] Projecting points using parametric model(~~C++~~, python, Summary)
-![projection.png](image/projection.png.png)
+![projection](image/projection.png)
 - [x] Removing outliers using a conditional and radiusoutlier removal (~~C++~~, python, Summary)
 ![conditional_filter](image/projection.png)
 ![radius_outlier_filter](image/radius_outlier_filter.png)
