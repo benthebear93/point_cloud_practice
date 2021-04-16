@@ -15,7 +15,7 @@ C++, Python example from PCL, Python-pcl.
 - [x] Removing outliers using a conditional and radiusoutlier removal (~~C++~~, python, Summary)
 - [x] KdTree (~~C++~~, python, Summary)
 - [ ] 3D Object Recognition based on Correspondence Grouping (C++, python, Summary)
-- [ ] Point cloud compression octree 
+- [ ] Point cloud compression octree (C++, python, Summary)
 - [ ] Spatial Partitioning and Search Operations with Octrees (C++, python, Summary)
 - [ ] Create ange image (C++, python, Summary, **working on**)
 - [x] extract borders from range images (~~C++~~, python, Summary)
