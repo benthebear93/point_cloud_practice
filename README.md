@@ -45,7 +45,7 @@ C++, Python example from PCL, Python-pcl.
 ### Projection
 ![projection](image/projection.png)
 ### Conditional filter
-![conditional_filter](image/projection.png)
+![conditional_filter](image/conditional_filter.png)
 ### Radius outlier filter
 ![radius_outlier_filter](image/radius_outlier_filter.png)
 
