@@ -35,7 +35,7 @@ C++, Python example from PCL, Python-pcl.
 ### Passthrough filter
 ![Passthrough filter](image/pass_through.png)
 ### Statistical outlier filter
-![statistical outlier filter](image/statistical outlier filter.png)
+![statistical outlier filter](image/statistical_outlier_filter.png)
 ### Segmentation 
 ![Segmentation](image/segmentation.png)
 ### Downsampling voxel
