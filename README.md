@@ -1,28 +1,17 @@
 # Basic Point cloud process practice
 
 C++, Python example from PCL, Python-pcl.
-
 - [x] Read pcd (~~C++~~, ~~python~~, Summary)
-![Read pcd](image/bunny_original.png)
-![Read pcd2](image/table_origin_read.png)
 - [x] Passthrough filter (~~C++~~, ~~python~~, Summary)
-![Passthrough filter](image/pass_through.png)
 - [x] statistical outlier filter(~~C++~~, ~~python~~, Summary)
-![statistical outlier filter](image/statistical outlier filter.png)
 - [x] Point Feature Histogram(~~C++~~, python, Summary)
 - [x] Fast Point Histogram(~~C++~~, python, Summary)
 - [x] Viewpoint Feature Histograms(~~C++~~, python, Summary)
 - [x] Segmentation & Extracting indices from a PointCloud(~~C++~~, python, Summary)
-![Segmentation](image/segmentation.png)
 - [x] normal estimation using integral images(~~C++~~, python, Summary)
-![normal estimation using integral images](image/normal_estimation_usign_integral_img.png)
 - [x] Downsampling a PointCloud using a VoxelGrid filter(~~C++~~, python, Summary)
-![downsampling_voxel](image/downsampling_voxel.png)
 - [x] Projecting points using parametric model(~~C++~~, python, Summary)
-![projection](image/projection.png)
 - [x] Removing outliers using a conditional and radiusoutlier removal (~~C++~~, python, Summary)
-![conditional_filter](image/projection.png)
-![radius_outlier_filter](image/radius_outlier_filter.png)
 - [x] KdTree (~~C++~~, python, Summary)
 - [ ] 3D Object Recognition based on Correspondence Grouping (C++, python, Summary)
 - [ ] Point cloud compression octree (C++, python, Summary)
@@ -39,4 +28,24 @@ C++, Python example from PCL, Python-pcl.
 - [ ] Difference of Normals Based Segmentation (C++, python, Summary)
 - [ ] Smoothing and normal estimation based on polynomial reconstruction (C++, python, Summary)
 - [ ] etc# point_cloud_practice
+
+### Read pcd 
+![Read pcd](image/bunny_original.png)
+![Read pcd2](image/table_origin_read.png)
+### Passthrough filter
+![Passthrough filter](image/pass_through.png)
+### Statistical outlier filter
+![statistical outlier filter](image/statistical outlier filter.png)
+### Segmentation 
+![Segmentation](image/segmentation.png)
+### Downsampling voxel
+![downsampling_voxel](image/downsampling_voxel.png)
+### Normal estimation using integral image
+![normal estimation using integral images](image/normal_estimation_usign_integral_img.png)
+### Projection
+![projection](image/projection.png)
+### Conditional filter
+![conditional_filter](image/projection.png)
+### Radius outlier filter
+![radius_outlier_filter](image/radius_outlier_filter.png)
 
