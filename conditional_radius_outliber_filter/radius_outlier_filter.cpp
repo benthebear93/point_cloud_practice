@@ -13,7 +13,7 @@ main (int argc, char** argv)
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
 
-  pcl::io::loadPCDFile ("/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/table_scene_mug_stereo_textured.pcd", *cloud);
+  pcl::io::loadPCDFile ("/home/benlee/Desktop/pc_practice/pcd_files/data/table_scene_lms400.pcd", *cloud);
   if (!cloud->is_dense)
   {
     cloud->is_dense = false;
@@ -22,8 +22,8 @@ main (int argc, char** argv)
   }
   pcl::RadiusOutlierRemoval<pcl::PointXYZ> outrem;
   outrem.setInputCloud(cloud);
-  outrem.setRadiusSearch(0.1);
-  outrem.setMinNeighborsInRadius(2);
+  outrem.setRadiusSearch(0.05);
+  outrem.setMinNeighborsInRadius(50);
   outrem.setKeepOrganized(true);
   outrem.filter (*cloud_filtered);
 
