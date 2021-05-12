@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/projecting_points.dir/projecting_points.cpp.o"
-  "projecting_points.pdb"
+  "CMakeFiles/projecting_points.dir/projecting_points.cpp.o.d"
   "projecting_points"
+  "projecting_points.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

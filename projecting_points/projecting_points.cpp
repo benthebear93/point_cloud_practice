@@ -13,7 +13,7 @@ int main ()
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_projected (new pcl::PointCloud<pcl::PointXYZ>);
 
-    pcl::io::loadPCDFile ("/home/benlee/Desktop/pc_practice/pcd_files/data/table_scene_lms400.pcd", *cloud);
+    pcl::io::loadPCDFile ("/home/benlee/Desktop/git/point_cloud_practice/pcd_files/data/passfilter_pc.pcd", *cloud);
 
     std::cerr << "Cloud before filtering: " << std::endl;
     std::cerr << *cloud << std::endl;
