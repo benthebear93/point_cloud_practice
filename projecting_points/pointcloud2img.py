@@ -7,8 +7,16 @@ import rospy
 from sensor_msgs.msg import PointCloud2
 import sensor_msgs.point_cloud2 as pc2
 import cv2
-file_path = '/home/benlee/Desktop/git/point_cloud_practice/pcd_files/data'
 import matplotlib.pyplot as plt
+file_path = '/home/benlee/Desktop/git/point_cloud_practice/pcd_files/data'
+img = 0
+
+def draw_circle(event, x, y, flags, param):
+    global img
+    if event == cv2.EVENT_LBUTTONDBLCLK:
+        cv2.circle(img, (x, y), 100, (255, 0, 0), -1)
+        print("drilling point x :", x , "drilling point y", y)
+
 
 class Pc2Img():
     def __init__(self):
@@ -74,7 +82,7 @@ class Pc2Img():
         self._cloud_projected = proj.filter()
         print 'type :', type(self._cloud_projected)
         print 'size :', self._cloud_projected.size
-        
+        print 'x pixel range :', self._img_x_size, 'y pixel range', self._img_y_size
         print "img size :", round(self._img_x_size/self._dis_point), round(self._img_y_size/self._dis_point)
         self._img_x_size = round(self._img_x_size/self._dis_point)
         self._img_y_size = round(self._img_y_size/self._dis_point)
@@ -82,8 +90,10 @@ class Pc2Img():
         #self.visualize(_cloud_projected)
 
     def make_img(self):
+        global img
         print("                                            ")
         print("==============start making img==============")
+        print 'one x pixel : 0.000'
         height = int(round(self._img_y_size))
         width  = int(round(self._img_x_size))
         print "h :", height, "w :", width
@@ -93,6 +103,10 @@ class Pc2Img():
         non_gray_img = np.zeros((height, width, 1), np.uint8) # y , x
         # black background image making , size : 755*894
         # start position of (0,0)
+        for i in range(0, 100):
+            print(self._pc_data[i][0])
+            print(self._pc_data[i][1])
+            print("                                       ")
 
         for i in range(0, self._pc_size):
             start_pos_x = self._min_x 
@@ -118,9 +132,13 @@ class Pc2Img():
                     pixel_y=pixel_y-1
                 #print("x : ", pixel_x, "y : ", pixel_y)
                 gray_img.itemset((pixel_y, pixel_x, 0), 140+int(range_z))
-
-        cv2.imshow('Pc2Img', gray_img)
-        cv2.waitKey(0)
+        img = gray_img
+        cv2.namedWindow('Pc2Img')
+        cv2.setMouseCallback('Pc2Img', draw_circle)
+        while True:
+            cv2.imshow('Pc2Img', gray_img)
+            if cv2.waitKey(20) & 0xFF == 27:
+                break   
         cv2.destroyAllWindows()
         #view image
 
