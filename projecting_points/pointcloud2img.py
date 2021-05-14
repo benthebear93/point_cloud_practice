@@ -9,14 +9,6 @@ import sensor_msgs.point_cloud2 as pc2
 import cv2
 import matplotlib.pyplot as plt
 file_path = '/home/benlee/Desktop/git/point_cloud_practice/pcd_files/data'
-img = 0
-
-def draw_circle(event, x, y, flags, param):
-    global img
-    if event == cv2.EVENT_LBUTTONDBLCLK:
-        cv2.circle(img, (x, y), 100, (255, 0, 0), -1)
-        print("drilling point x :", x , "drilling point y", y)
-
 
 class Pc2Img():
     def __init__(self):
@@ -26,7 +18,7 @@ class Pc2Img():
         self._img_x_size = 0
         self._img_y_size = 0
         self._img_z_size = 0
-        self._dis_point = 0.0002
+        self._dis_two_point = 0.000917/4
         self._img_x = []
         self._img_y = []
         self._img_z = []
@@ -34,9 +26,25 @@ class Pc2Img():
         self._min_x = 0
         self._min_y = 0
         self._min_z = 0
-        
+
+    def mouse_event_handle(self, event, x,y,flags, param):
+        img = param[0]
+        if event==cv2.EVENT_LBUTTONDBLCLK:
+            
+            distance =img[y,x,0]
+            if(distance==0):
+                print("select point is empty search nearest point")
+                for i in range(-2, 3):
+                    for j in range(-2, 3):
+                        #print 'y+j', y+j,'x-j', x+i
+                        distance = img[y+j,x-j,0]
+            print distance
+            print 'x :', x*self._dis_two_point + self._min_x, 'y :', y*self._dis_two_point + self._min_y, 'z :', ((distance-140)+ self._min_z)/1500 
+            cv2.circle(img, (x, y), 10, (255, 0, 0), -1)
+            cv2.imshow("Pc2Img", img)
+            
     def read_pcd(self):
-        print("read pcd")
+        # print("read pcd")
         profile_pcd = pcl.load(file_path + '/passfilter_pc.pcd')
         self._pc_data = profile_pcd
         self._pc_size = profile_pcd.size
@@ -56,6 +64,8 @@ class Pc2Img():
         min_z = round(min(self._img_z),5)
         self._min_x = min_x
         self._min_y = min_y
+        # print(min_x)
+        # print(min_y)
         self._min_z = min_z
         #find min and max to set start and end of img
 
@@ -80,40 +90,40 @@ class Pc2Img():
         proj = self._pc_data.make_ProjectInliers()
         proj.set_model_type(pcl.SACMODEL_PLANE)
         self._cloud_projected = proj.filter()
-        print 'type :', type(self._cloud_projected)
-        print 'size :', self._cloud_projected.size
-        print 'x pixel range :', self._img_x_size, 'y pixel range', self._img_y_size
-        print "img size :", round(self._img_x_size/self._dis_point), round(self._img_y_size/self._dis_point)
-        self._img_x_size = round(self._img_x_size/self._dis_point)
-        self._img_y_size = round(self._img_y_size/self._dis_point)
+        # print 'type :', type(self._cloud_projected)
+        # print 'size :', self._cloud_projected.size
+        # print 'x pixel range :', self._img_x_size, 'y pixel range', self._img_y_size
+        # print "img size :", round(self._img_x_size/self._dis_two_point), round(self._img_y_size/self._dis_two_point)
+        self._img_x_size = round(self._img_x_size/self._dis_two_point)
+        self._img_y_size = round(self._img_y_size/self._dis_two_point)
 
         #self.visualize(_cloud_projected)
 
     def make_img(self):
-        global img
         print("                                            ")
         print("==============start making img==============")
-        print 'one x pixel : 0.000'
+        print 'one pixel : 0.23mm' 
+        print 'set tool size'
         height = int(round(self._img_y_size))
         width  = int(round(self._img_x_size))
         print "h :", height, "w :", width
-        # height = 755 , width = 894
+        # height = 659 , width = 790
 
         gray_img = np.zeros((height, width, 1), np.uint8) # y , x
         non_gray_img = np.zeros((height, width, 1), np.uint8) # y , x
         # black background image making , size : 755*894
         # start position of (0,0)
-        for i in range(0, 100):
-            print(self._pc_data[i][0])
-            print(self._pc_data[i][1])
-            print("                                       ")
 
+        ker3x3 = np.array([[1, 1, 1], [1,1,1],[1,1,1]])
+        
         for i in range(0, self._pc_size):
             start_pos_x = self._min_x 
             start_pos_y = self._min_y
+            min_x = start_pos_x
+            min_y = start_pos_y
             mimun_z     = self._min_z
-            pixel_x = int(round((self._pc_data[i][0] - start_pos_x)/self._dis_point))
-            pixel_y = int(round((self._pc_data[i][1] - start_pos_y)/self._dis_point))
+            pixel_x = int(round((self._pc_data[i][0] - start_pos_x)/self._dis_two_point))
+            pixel_y = int(round((self._pc_data[i][1] - start_pos_y)/self._dis_two_point))
             range_z = (self._pc_data[i][2] - mimun_z)*1500
             #multipy 1500 for conversion of range z to 0~255 
 
@@ -123,24 +133,33 @@ class Pc2Img():
                 pixel_y=pixel_y-1
                 
             gray_img.itemset((pixel_y, pixel_x, 0), 140+int(range_z)) #140 for minumum 
-            for j in range(0, 3):
-                pixel_x = pixel_x+1
-                if(pixel_x> width-1):
-                    pixel_x = pixel_x -1
-                pixel_y = pixel_y
-                if(pixel_y>height-1):
-                    pixel_y=pixel_y-1
+            for i in range(-2, 3):
+                for j in range(-2, 3):
+                    pixel_y = pixel_y+j
+                    pixel_x = pixel_x+i
+                    #print 'y+j', pixel_y+j,'x-j', pixel_x+i
+                    gray_img.itemset((pixel_y, pixel_x, 0), 140+int(range_z)) #140 for minumum 
+            # for j in range(0, 3):
+            #     pixel_x = pixel_x+1
+            #     if(pixel_x> width-1):
+            #         pixel_x = pixel_x -1
+            #     pixel_y = pixel_y
+            #     if(pixel_y>height-1):
+            #         pixel_y=pixel_y-1
                 #print("x : ", pixel_x, "y : ", pixel_y)
-                gray_img.itemset((pixel_y, pixel_x, 0), 140+int(range_z))
+                #gray_img.itemset((pixel_y, pixel_x, 0), 140+int(range_z))
+            #print("range_z z : ", range_z, "data :", self._pc_data[i][0], "test :" ,pixel_x*0.000917/4 + min_x)
+            #print("range_z z : ", range_z, "data :", self._pc_data[i][2], "test :" ,range_z/1500 + mimun_z)
+            #match 
+
         img = gray_img
         cv2.namedWindow('Pc2Img')
-        cv2.setMouseCallback('Pc2Img', draw_circle)
+        cv2.setMouseCallback('Pc2Img', self.mouse_event_handle, param = [img])
         while True:
-            cv2.imshow('Pc2Img', gray_img)
+            cv2.imshow('Pc2Img', img)
             if cv2.waitKey(20) & 0xFF == 27:
                 break   
         cv2.destroyAllWindows()
-        #view image
 
 if __name__=="__main__":
     test = Pc2Img()
