@@ -38,8 +38,11 @@ class Pc2Img():
                     for j in range(-2, 3):
                         #print 'y+j', y+j,'x-j', x+i
                         distance = img[y+j,x-j,0]
+            if(distance==0):
+                print("need to choose different point")
             print distance
-            print 'x :', x*self._dis_two_point + self._min_x, 'y :', y*self._dis_two_point + self._min_y, 'z :', ((distance-140)+ self._min_z)/1500 
+            print (self._min_z)
+            print 'x :', x*self._dis_two_point + self._min_x, 'y :', y*self._dis_two_point + self._min_y, 'z :', ((distance-140)/1500.0 + self._min_z)
             cv2.circle(img, (x, y), 10, (255, 0, 0), -1)
             cv2.imshow("Pc2Img", img)
             
