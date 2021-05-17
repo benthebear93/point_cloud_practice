@@ -1,3 +1,4 @@
-/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build/CMakeFiles/rebuild_cache.dir
-/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build/CMakeFiles/normal_estimation_using_integral_images.dir
-/home/benlee/Desktop/pc_practice/normal_estimation_using_integral_image/build/CMakeFiles/edit_cache.dir
+/home/benlee/Desktop/git/point_cloud_practice/normal_estimation_using_integral_image/build/CMakeFiles/rebuild_cache.dir
+/home/benlee/Desktop/git/point_cloud_practice/normal_estimation_using_integral_image/build/CMakeFiles/edit_cache.dir
+/home/benlee/Desktop/git/point_cloud_practice/normal_estimation_using_integral_image/build/CMakeFiles/normal_estimation_using_integral_images.dir
+/home/benlee/Desktop/git/point_cloud_practice/normal_estimation_using_integral_image/build/CMakeFiles/normal_kdtree.dir
