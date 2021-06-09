@@ -1,3 +1,3 @@
-/home/benlee/Desktop/pc_practice/extract_border_from_rangeimage/build/CMakeFiles/rebuild_cache.dir
-/home/benlee/Desktop/pc_practice/extract_border_from_rangeimage/build/CMakeFiles/extract_border.dir
-/home/benlee/Desktop/pc_practice/extract_border_from_rangeimage/build/CMakeFiles/edit_cache.dir
+/home/benlee/Desktop/git/point_cloud_practice/extract_border_from_rangeimage/build/CMakeFiles/rebuild_cache.dir
+/home/benlee/Desktop/git/point_cloud_practice/extract_border_from_rangeimage/build/CMakeFiles/extract_border.dir
+/home/benlee/Desktop/git/point_cloud_practice/extract_border_from_rangeimage/build/CMakeFiles/edit_cache.dir

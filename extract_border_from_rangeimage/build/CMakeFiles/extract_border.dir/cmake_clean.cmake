@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/extract_border.dir/extract_border.cpp.o"
-  "extract_border.pdb"
+  "CMakeFiles/extract_border.dir/extract_border.cpp.o.d"
   "extract_border"
+  "extract_border.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

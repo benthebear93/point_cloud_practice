@@ -21,7 +21,7 @@ int main (int argc, char** argv) {
   pcl::PointCloud<pcl::PointXYZ> pointCloud;
   //pcl::PointCloud<PointType>::Ptr pointCloud (new pcl::PointCloud<pcl::PointXYZ>);
   //pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
-  pcl::io::loadPCDFile (  "/home/benlee/Desktop/pc_practice/pcd_files/data/table_scene_lms400.pcd", pointCloud);
+  pcl::io::loadPCDFile (  "/home/benlee/catkin_ws/src/Direct_machining_with_manipulator/test_bed/pcd_data/Kdtree_test_KNN.pcd", pointCloud);
 
   // Generate the data
   // for (float y=-0.5f; y<=0.5f; y+=0.01f) {
@@ -61,7 +61,7 @@ int main (int argc, char** argv) {
   viewer.setBackgroundColor(1,1,1);
   pcl::visualization::PointCloudColorHandlerCustom<pcl::PointWithRange> range_image_color_handler (range_image_ptr, 0, 0, 0); 
   viewer.addPointCloud(range_image_ptr, range_image_color_handler, "range image");
-  viewer.setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 5, "range image");
+  viewer.setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "range image");
 
   //viewer.addCoordinateSystem(1.0f);
   //pcl::visualization::PointCloudColorHandlerCustom<PointType> point_cloud_color_handler (point_cloud_ptr, 150, 150, 150);

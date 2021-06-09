@@ -17,41 +17,12 @@ float angular_resolution= 0.5f;
 pcl::RangeImage::CoordinateFrame coordinate_frame = pcl::RangeImage::CAMERA_FRAME;
 bool setUnseenToMaxRange = false;
 
-void 
-printUsage (const char* progName)
-{
-  std::cout << "\n\nUsage: "<<progName<<" [options] <scene.pcd>\n\n"
-            << "Options:\n"
-            << "-------------------------------------------\n"
-            << "-r <float>   angular resolution in degrees (default "<<angular_resolution<<")\n"
-            << "-c <int>     coordinate frame (default "<< (int)coordinate_frame<<")\n"
-            << "-m           Treat all unseen points to max range\n"
-            << "-h           this help\n"
-            << "\n\n";
-}
-
 int main (int argc, char** argv) {
-  if (pcl::console::find_argument (argc, argv, "-h") >= 0)
-  {
-    printUsage (argv[0]);
-    return 0;
-  }
-  if (pcl::console::find_argument (argc, argv, "-m") >= 0)
-  {
-    setUnseenToMaxRange = true;
-    std::cout << "Setting unseen values in range image to maximum range readings.\n";
-  }
+  setUnseenToMaxRange = true;
   int tmp_coordinate_frame;
-  if (pcl::console::parse (argc, argv, "-c", tmp_coordinate_frame) >= 0)
-  {
-    coordinate_frame = pcl::RangeImage::CoordinateFrame (tmp_coordinate_frame);
-    std::cout << "Using coordinate frame "<< (int)coordinate_frame<<".\n";
-  }
-  if (pcl::console::parse (argc, argv, "-r", angular_resolution) >= 0)
-    std::cout << "Setting angular resolution to "<<angular_resolution<<"deg.\n";
   angular_resolution = pcl::deg2rad (angular_resolution);
 
-  pcl::PointCloud<PointType>::Ptr point_cloud_ptr (new pcl::PointCloud<PointType>); //making point cloyd
+  pcl::PointCloud<PointType>::Ptr point_cloud_ptr (new pcl::PointCloud<PointType>); //making point cloUd
   pcl::PointCloud<PointType>& point_cloud = *point_cloud_ptr; //getting address
   pcl::PointCloud<pcl::PointWithViewpoint> far_ranges; //set range
   Eigen::Affine3f scene_sensor_pose (Eigen::Affine3f::Identity ()); //set sensor pose
@@ -62,7 +33,6 @@ int main (int argc, char** argv) {
     if (pcl::io::loadPCDFile (filename, point_cloud) == -1)
     {
       std::cout << "Was not able to open file \""<<filename<<"\".\n";
-      printUsage (argv[0]);
       return 0;
     }
     scene_sensor_pose = Eigen::Affine3f (Eigen::Translation3f (point_cloud.sensor_origin_[0],
@@ -116,6 +86,7 @@ int main (int argc, char** argv) {
   pcl::RangeImageBorderExtractor border_extractor (&range_image);
   pcl::PointCloud<pcl::BorderDescription> border_descriptions;
   border_extractor.compute (border_descriptions);
+  std::cout << border_descriptions <<std::endl;
   
   // ----------------------------------
   // -----Show points in 3D viewer-----
@@ -138,6 +109,13 @@ int main (int argc, char** argv) {
         shadow_points.points.push_back (range_image[y*range_image.width + x]);
     }
   }
+  std::cout << border_points.points.size()<<std::endl;
+  for (int i =0; i<border_points.points.size(); i++){
+    std::cout << 300+int(border_points.points[i].x * 1000)<< std::endl;
+    std::cout << int(border_points.points[i].y * 1000)<< std::endl;
+  }
+  //std::cout << border_points.points[1]<< std::endl;
+  
   pcl::visualization::PointCloudColorHandlerCustom<pcl::PointWithRange> border_points_color_handler (border_points_ptr, 0, 255, 0);
   viewer.addPointCloud<pcl::PointWithRange> (border_points_ptr, border_points_color_handler, "border points");
   viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 7, "border points");
