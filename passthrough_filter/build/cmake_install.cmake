@@ -1,4 +1,4 @@
-# Install script for directory: /home/benlee/Desktop/pc_practice/passthrough_filter
+# Install script for directory: /home/benlee/Desktop/git/point_cloud_practice/passthrough_filter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/benlee/Desktop/pc_practice/passthrough_filter/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/benlee/Desktop/git/point_cloud_practice/passthrough_filter/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

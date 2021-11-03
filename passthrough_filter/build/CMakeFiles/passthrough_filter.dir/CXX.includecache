@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/benlee/Desktop/pc_practice/passthrough_filter/passthrough_filter.cpp
+/home/benlee/Desktop/git/point_cloud_practice/passthrough_filter/passthrough_filter.cpp
 pcl/visualization/cloud_viewer.h
 -
 pcl/filters/passthrough.h

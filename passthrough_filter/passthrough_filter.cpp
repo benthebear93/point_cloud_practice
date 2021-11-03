@@ -11,15 +11,17 @@ int main ()
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
 
-    pcl::io::loadPCDFile ("/home/benlee/Desktop/pc_practice/pcd_files/data/bun000.pcd", *cloud);
+    pcl::io::loadPCDFile ("/home/benlee/Desktop/git/point_cloud_practice/pcd_files/data/scan.pcd", *cloud);
 
     // Create the filtering object
     pcl::PassThrough<pcl::PointXYZ> pass;
     pass.setInputCloud (cloud);
     pass.setFilterFieldName ("z");
-    pass.setFilterLimits (0.03, 0.04);
+    pass.setFilterLimitsNegative(false); // option 
+    pass.setFilterLimits (0.2, 0.35);
 
     pass.filter (*cloud_filtered);
+    pcl::io::savePCDFile ("/home/benlee/Desktop/git/point_cloud_practice/pcd_files/data/scan.pcd", *cloud_filtered);
 
     pcl::visualization::CloudViewer viewer("Cloud Viewer");
     viewer.showCloud(cloud_filtered);

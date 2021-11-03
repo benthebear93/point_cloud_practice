@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/benlee/Desktop/pc_practice/passthrough_filter/build/CMakeFiles/CMakeTmp
+Change Dir: /home/benlee/Desktop/git/point_cloud_practice/passthrough_filter/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_baf79/fast"
-/usr/bin/make -f CMakeFiles/cmTC_baf79.dir/build.make CMakeFiles/cmTC_baf79.dir/build
-make[1]: Entering directory '/home/benlee/Desktop/pc_practice/passthrough_filter/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_baf79.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_baf79.dir/CheckSymbolExists.c.o   -c /home/benlee/Desktop/pc_practice/passthrough_filter/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_baf79
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_baf79.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_baf79.dir/CheckSymbolExists.c.o  -o cmTC_baf79 
-CMakeFiles/cmTC_baf79.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_e6494/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e6494.dir/build.make CMakeFiles/cmTC_e6494.dir/build
+make[1]: Entering directory '/home/benlee/Desktop/git/point_cloud_practice/passthrough_filter/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e6494.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e6494.dir/CheckSymbolExists.c.o   -c /home/benlee/Desktop/git/point_cloud_practice/passthrough_filter/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_e6494
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6494.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e6494.dir/CheckSymbolExists.c.o  -o cmTC_e6494 
+CMakeFiles/cmTC_e6494.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_baf79.dir/build.make:97: recipe for target 'cmTC_baf79' failed
-make[1]: *** [cmTC_baf79] Error 1
-make[1]: Leaving directory '/home/benlee/Desktop/pc_practice/passthrough_filter/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_baf79/fast' failed
-make: *** [cmTC_baf79/fast] Error 2
+CMakeFiles/cmTC_e6494.dir/build.make:97: recipe for target 'cmTC_e6494' failed
+make[1]: *** [cmTC_e6494] Error 1
+make[1]: Leaving directory '/home/benlee/Desktop/git/point_cloud_practice/passthrough_filter/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e6494/fast' failed
+make: *** [cmTC_e6494/fast] Error 2
 
-File /home/benlee/Desktop/pc_practice/passthrough_filter/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/benlee/Desktop/git/point_cloud_practice/passthrough_filter/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/benlee/Desktop/pc_practice/passthrough_filter/build/CMakeFiles/CMakeTmp
+Change Dir: /home/benlee/Desktop/git/point_cloud_practice/passthrough_filter/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5e213/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5e213.dir/build.make CMakeFiles/cmTC_5e213.dir/build
-make[1]: Entering directory '/home/benlee/Desktop/pc_practice/passthrough_filter/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5e213.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5e213.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_5e213
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e213.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_5e213.dir/CheckFunctionExists.c.o  -o cmTC_5e213 -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_f0a0e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f0a0e.dir/build.make CMakeFiles/cmTC_f0a0e.dir/build
+make[1]: Entering directory '/home/benlee/Desktop/git/point_cloud_practice/passthrough_filter/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f0a0e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f0a0e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f0a0e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0a0e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f0a0e.dir/CheckFunctionExists.c.o  -o cmTC_f0a0e -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_5e213.dir/build.make:97: recipe for target 'cmTC_5e213' failed
-make[1]: *** [cmTC_5e213] Error 1
-make[1]: Leaving directory '/home/benlee/Desktop/pc_practice/passthrough_filter/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_5e213/fast' failed
-make: *** [cmTC_5e213/fast] Error 2
+CMakeFiles/cmTC_f0a0e.dir/build.make:97: recipe for target 'cmTC_f0a0e' failed
+make[1]: *** [cmTC_f0a0e] Error 1
+make[1]: Leaving directory '/home/benlee/Desktop/git/point_cloud_practice/passthrough_filter/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f0a0e/fast' failed
+make: *** [cmTC_f0a0e/fast] Error 2
 
 

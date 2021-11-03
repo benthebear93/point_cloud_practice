@@ -1,3 +1,0 @@
-/home/benlee/Desktop/git/point_cloud_practice/range_image/build/CMakeFiles/rebuild_cache.dir
-/home/benlee/Desktop/git/point_cloud_practice/range_image/build/CMakeFiles/range_image.dir
-/home/benlee/Desktop/git/point_cloud_practice/range_image/build/CMakeFiles/edit_cache.dir
